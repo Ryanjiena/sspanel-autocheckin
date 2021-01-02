@@ -6,6 +6,7 @@
    <summary>目录</summary>
 
 - [SSPanel 自动签到 V2.0 支持多站点多用户](#sspanel-自动签到-v20-支持多站点多用户)
+  - [说明](#说明)
   - [升级警告](#升级警告)
   - [使用方法](#使用方法)
     - [方式一：Github Actions（推荐）](#方式一github-actions推荐)
@@ -24,6 +25,14 @@
       - [方式二： 源作者内容直接覆盖自己内容](#方式二-源作者内容直接覆盖自己内容)
 
 </details>
+
+## 相关说明
+
+- 适用于使用 SSPanel 用户管理面板搭建的网站，网站页面底部会有 `Powered by SSPANEL` 字段
+- 支持使用配置文件读取账户信息，支持多机场多用户签到
+- 支持一日多次签到
+- 支持推送签到信息到 QQ、微信和 Telegram
+- 若有 bug 请到 [Issues](https://github.com/isecret/sspanel-autocheckin/issues/new) 反馈
 
 ## 升级警告
 
@@ -126,17 +135,16 @@ DISPALY_CONTEXT=1
 
 脚本添加可执行权限后运行。
 
-> 因为个人隐私问题，脚本运行时不会输出个人账户信息。本地运行想在终端输出个人信息的运行 `sed -i 's/# echo -e/echo -e/g' ssp-autocheckin.sh` 即可。
-
 ```bash
-$ sed -i 's/# echo -e/echo -e/g' ssp-autocheckin.sh # 终端输出个人信息
 $ chmod +x ssp-autocheckin.sh && ./ssp-autocheckin.sh
-SSPanel Auto Checkin v2.0.0 签到通知
+SSPanel Auto Checkin v2.1.5 签到通知
+## 用户 1
 
 - 【签到站点】: DOMAIN
 - 【签到用户】: EMAIL
 - 【签到时间】: 2020-12-26 19:03:19
 - 【签到状态】: 续命1天, 获得了 111 MB流量.
+- 【用户等级】：VIP1
 - 【用户余额】: 2.98 CNY
 - 【用户限速】: 100 Mbps
 - 【总流量】: 317.91 GB
